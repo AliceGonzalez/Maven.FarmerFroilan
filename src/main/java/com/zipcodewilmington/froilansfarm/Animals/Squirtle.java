@@ -40,7 +40,7 @@ public class Squirtle extends Animal implements Botanist_Interface {
     }
     @Override
     public void water(CropRow croprow) {
-        croprow.hasBeenWatered = true;
+        croprow.isWatered = true;
     }
 
     @Override
