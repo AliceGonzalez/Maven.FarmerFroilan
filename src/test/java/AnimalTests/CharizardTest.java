@@ -77,7 +77,7 @@ public class CharizardTest {
     public void burnRowTest() {
         Charizard charizard = new Charizard(null, null, null);
         CropRow cr =  new CropRow();
-        charizard.burnCrops(cr);
+        charizard.burn(cr);
         Assert.assertTrue(cr.hasBeenBurned);
     }
 }

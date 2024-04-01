@@ -5,6 +5,7 @@ import com.zipcodewilmington.froilansfarm.TheInterfaces.Botanist_Interface;
 public class Bulbasaur extends Animal implements Botanist_Interface {
     String type;
     Double id;
+
     public Bulbasaur(String name,String type, Double id) {
         super(name);
         this.type = type;

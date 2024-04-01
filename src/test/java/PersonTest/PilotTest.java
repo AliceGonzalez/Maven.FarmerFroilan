@@ -12,7 +12,7 @@ public class PilotTest {
 
     @Before
     public void setup(){
-        pilot = new Pilot();
+        pilot = new Pilot(null);
         cropDuster = new CropDuster();
         cropRow = new CropRow();
     }

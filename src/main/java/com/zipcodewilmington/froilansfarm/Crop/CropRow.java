@@ -14,7 +14,7 @@ import java.util.ListIterator;
 
 public class CropRow extends ArrayList<Crop> implements Produce_Interface {
 
-
+ArrayList<Crop> plant = new ArrayList<>();
     boolean isFertilized;
     boolean isHarvested;
     public boolean isWatered;

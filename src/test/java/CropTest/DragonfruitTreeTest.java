@@ -1,8 +1,6 @@
 package CropTest;
-import com.zipcodewilmington.froilansfarm.Crop.CornStalk;
-import com.zipcodewilmington.froilansfarm.Crop.Crop;
-import com.zipcodewilmington.froilansfarm.Crop.CropRow;
-import com.zipcodewilmington.froilansfarm.Crop.DragonfruitTree;
+import com.zipcodewilmington.froilansfarm.Animals.Squirtle;
+import com.zipcodewilmington.froilansfarm.Crop.*;
 import com.zipcodewilmington.froilansfarm.Food.Dragonfruit;
 import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
 import com.zipcodewilmington.froilansfarm.Vehicle.Tractor;
@@ -21,9 +19,14 @@ public class DragonfruitTreeTest {
 
     @Test
     public void testYield1(){
-        DragonfruitTree dragonfruitTree = new DragonfruitTree();
-        dragonfruitTree.fertilize();
-        Assert.assertTrue(dragonfruitTree.yield() instanceof Dragonfruit);
+        CropRow<DragonfruitTree> cr = new CropRow<>();
+        Storage str= new Storage();
+        CropDuster cd = new CropDuster();
+        Tractor t = new Tractor();
+        Squirtle sqr = new Squirtle(null,null,null);
+
+
+        Assert.assertTrue(dragonfruitTree.yield(cr,str));
     }
 
     @Test

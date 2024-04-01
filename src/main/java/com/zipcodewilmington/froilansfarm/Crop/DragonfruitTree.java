@@ -7,7 +7,7 @@ import com.zipcodewilmington.froilansfarm.Food.Dragonfruit;
 public class DragonfruitTree extends Crop {
 
     public void yield(CropRow cropRow, Storage storage) {
-        if (hasBeenWatered() && hasBeenFertilized() && hasBeenFertilized()) {
+        if (hasBeenWatered() && hasBeenFertilized() && hasBeenHarvested()) {
             storage.add(new Dragonfruit(), cropRow.size());
         }
     }

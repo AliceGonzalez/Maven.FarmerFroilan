@@ -1,7 +1,4 @@
 package ShelterTest;
-import Shelter.FarmHouse;
-import com.zipcodewilmington.froilansfarm.Animals.Bulbasaur;
-import com.zipcodewilmington.froilansfarm.Animals.Charizard;
 import com.zipcodewilmington.froilansfarm.Person.Person;
 import com.zipcodewilmington.froilansfarm.Shelter.Shelter;
 import org.junit.Assert;
@@ -13,7 +10,7 @@ public class FarmHouseTest {
   public void farmHouseIsShelter() {
     Shelter<Person> farmHouse = new Shelter();
 
-    Assert.assertTrue(Person instanceof Shelter);
+    Assert.assertTrue(farmHouse instanceof Shelter);
   }
   @Test
     public void addPerson() {

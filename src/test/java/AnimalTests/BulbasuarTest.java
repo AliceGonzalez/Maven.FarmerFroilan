@@ -73,7 +73,7 @@ public class BulbasuarTest {
     public void nurtureCropRowTest() {
         Bulbasaur bulbasaur = new Bulbasaur(null, null, null);
         CropRow cr =  new CropRow();
-        bulbasaur.nurtureCrops(cr);
+        bulbasaur.nurture(cr);
         Assert.assertTrue(cr.hasBeenNurtured);
     }
 

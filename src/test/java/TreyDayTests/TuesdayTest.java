@@ -12,6 +12,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class TuesdayTest {
+    Storage storage;
     Tractor tractor;
     CropRow cropRow;
     EarCorn earCorn;
@@ -53,7 +54,7 @@ public void firstRowPlanted() {
 //    Feeding each Horse 3 ear of Corn.
     @Test
 public void froilanFeedsRapidash() {
-        rapidash.eat(earCorn, -1);
+        rapidash.eat(storage,earCorn,1);
 
     Integer expected = -1;
    Integer actual = storage.get(earCorn);
@@ -64,9 +65,9 @@ public void froilanFeedsRapidash() {
     @Test
     public void froilanBreakfastEarCornTest() {
 
-        froilan.eat(earCorn, -1);
+        froilan.eat(storage,earCorn,1);
 
-        Integer expected = -1; // this is just a placeholder.
+        Integer expected = 1; // this is just a placeholder.
         Integer actual = storage.get(earCorn); // this will return a value for Togekiss eggs
 
         Assert.assertEquals(expected, actual);
@@ -74,9 +75,9 @@ public void froilanFeedsRapidash() {
 
     @Test
     public void froilanBreakfastTomatoTest() {
-        froilan.eat(tomato, -2);
+        froilan.eat(storage,tomato, 2);
 
-        Integer expected = -2; // this is just a placeholder.
+        Integer expected = 2; // this is just a placeholder.
         Integer actual = storage.get(tomato); // this will return a value for Togekiss eggs
 
         Assert.assertEquals(expected, actual);
@@ -84,9 +85,9 @@ public void froilanFeedsRapidash() {
     @Test
     public void froilanBreakfastEggTest() {
 
-        froilan.eat(ruffletEgg, -5);
+        froilan.eat(storage, ruffletEgg, 5);
 
-        Integer expected = -5; // this is just a placeholder.
+        Integer expected = 5; // this is just a placeholder.
         Integer actual = storage.get(ruffletEgg); // this will return a value for Togekiss eggs
 
         Assert.assertEquals(expected, actual);
