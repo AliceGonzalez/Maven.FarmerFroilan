@@ -25,4 +25,7 @@ public class Farmer extends Person implements Rider_Interface, Botanist_Interfac
     public void water() {
 
     }
+
+    public void harvest() {
+    }
 }

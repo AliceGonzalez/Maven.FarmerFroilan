@@ -12,7 +12,7 @@ public class FarmerTest {
 
     @Before
     public void setup(){
-        farmer = new Farmer();
+        farmer = new Farmer("froilan");
         cropRow = new CropRow();
     }
     @Test

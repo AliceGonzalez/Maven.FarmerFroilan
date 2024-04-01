@@ -31,8 +31,9 @@ public class AirCraft implements Vehicle_Interface, Rideable_Interface {
     }
 
     @Override
-    public void removeRider() {
+    public boolean removeRider() {
 
+        return false;
     }
     public void fly() {
     }

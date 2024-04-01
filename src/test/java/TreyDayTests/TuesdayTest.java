@@ -4,6 +4,7 @@ import com.zipcodewilmington.froilansfarm.Animals.Rapidash;
 import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.Food.EarCorn;
 import com.zipcodewilmington.froilansfarm.Crop.Storage;
+import com.zipcodewilmington.froilansfarm.Food.RuffletEgg;
 import com.zipcodewilmington.froilansfarm.Food.Tomato;
 import com.zipcodewilmington.froilansfarm.Person.Person;
 import com.zipcodewilmington.froilansfarm.Vehicle.Tractor;
@@ -14,12 +15,12 @@ import org.junit.Test;
 public class TuesdayTest {
     Tractor tractor;
     CropRow cropRow;
-    EarCorn earCorn;
- //   Storage storage;
+    Integer earCorn;
+    Storage storage;
     Person froilan;
     Tomato tomato;
     Rapidash rapidash;
-   // RuffletEgg ruffletEgg;
+    RuffletEgg ruffletEgg;
     @Before
     public void setup(){
         tractor = new Tractor();
@@ -29,16 +30,13 @@ public class TuesdayTest {
        rapidash = new Rapidash(null,null,null);
         froilan = new Person(null);
         tomato = new Tomato();
-       // ruffletEgg = new RuffletEgg();
+        ruffletEgg = new RuffletEgg();
     }
 //    On Tuesday, Froilan uses his Tractor to harvest each Crop in each CropRow.
 @Test
 public void firstRowPlanted() {
-
-
     tractor.harvest(cropRow);
-
-    Assert.assertTrue(cropRow.hasBeenHarvested);
+    Assert.assertTrue(cropRow.beenHarvested());
 }
 
 //    Riding each Horse in each Stable.

@@ -22,4 +22,4 @@ public class TogekissEgg implements Edible
         return fertilized = true;
     }
 }
-}
+

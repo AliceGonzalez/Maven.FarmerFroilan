@@ -38,4 +38,9 @@ public class Tractor implements Vehicle_Interface {
     public Boolean hasBeenRidden() {
         return null;
     }
+
+    @Override
+    public Person addRider() {
+        return null;
+    }
 }

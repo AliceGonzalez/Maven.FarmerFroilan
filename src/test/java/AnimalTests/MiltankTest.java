@@ -1,5 +1,6 @@
 package AnimalTests;
 import com.zipcodewilmington.froilansfarm.Animals.Miltank;
+import com.zipcodewilmington.froilansfarm.Food.MilktankMilkGallon;
 import com.zipcodewilmington.froilansfarm.TheInterfaces.Produce_Interface;
 import org.junit.Assert;
 import org.junit.Test;
@@ -79,7 +80,7 @@ public class MiltankTest {
     @Test
     public void milkGallonTest(){
             if(hasBeenFertilized && hasBeenHarvested){
-                MilkGallon milkGallon = new MilkGallon();
+                MilktankMilkGallon milkGallon = new MilktankMilkGallon();
         }
     }
 }

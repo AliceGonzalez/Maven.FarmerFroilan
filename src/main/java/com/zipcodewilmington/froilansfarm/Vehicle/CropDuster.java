@@ -6,6 +6,8 @@ import com.zipcodewilmington.froilansfarm.Person.Pilot;
 
 public class CropDuster extends AirCraft{
 
+    public boolean hasPilot;
+
     public void addPilot(Pilot pilot) {
         super.addPilot(pilot);
     }
@@ -32,7 +34,8 @@ public class CropDuster extends AirCraft{
         super.fertilize(cropRow);
     }
 
-    public void removeRider() {
+    public boolean removeRider() {
         super.removeRider();
+        return false;
     }
 }

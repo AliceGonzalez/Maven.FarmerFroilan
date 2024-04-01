@@ -24,41 +24,35 @@ public class AircraftTest {
     @Test
     public void addPilotTest(){
         airCraft.addPilot(pilot);
-
         Assert.assertTrue(airCraft.hasBeenRidden());
     }
     @Test
     public void flyTest(){
         airCraft.fly();
         String noise = airCraft.makeNoise();
-
         Assert.assertEquals("Vroom", noise);
     }
     @Test
     public void makeNoiseTest(){
         airCraft.fly();
         String noise = airCraft.makeNoise();
-
         Assert.assertEquals("Vroom", noise);
     }
     @Test
     public void addRiderTest(){
         airCraft.addRider();
-
         Assert.assertTrue(airCraft.hasRidder());
     }
     @Test
     public void removeRiderTest(){
         airCraft.addRider(pilot);
         airCraft.removeRider();
-
         Assert.assertFalse(airCraft.haspilot);
     }
     @Test
     public void fertilizeTest(){
         airCraft.addRider(pilot);
         airCraft.fertilize(cropRow);
-
         Assert.assertTrue(cropRow.hasBeenFertalized);
     }
 }

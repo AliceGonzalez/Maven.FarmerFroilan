@@ -1,4 +1,5 @@
 package Vehicle;
+import com.zipcodewilmington.froilansfarm.Person.Person;
 import com.zipcodewilmington.froilansfarm.Person.Pilot;
 import com.zipcodewilmington.froilansfarm.Vehicle.FarmVehicle;
 import org.junit.Assert;
@@ -10,18 +11,22 @@ public class FarmVehicleTest {
 
     @Before
     public void setup(){
-        farmVehicle = new FarmVehicle();
+        farmVehicle = new FarmVehicle() {
+            @Override
+            public Person addRider() {
+                return null;
+            }
+        };
     }
 
     @Test
     public void testInheritance(){
-        Assert.assertTrue(farmVehicle != null);
+        Assert.assertNotNull(farmVehicle);
     }
     @Test
     public void makeNoiseTest(){
         farmVehicle.fly();
         String noise = farmVehicle.makeNoise();
-
         Assert.assertEquals("Vroom", noise);
     }
     @Test
@@ -33,7 +38,6 @@ public class FarmVehicleTest {
     public void removeRiderTest(){
         farmVehicle.addRider(pilot);
         farmVehicle.removeRider();
-
         Assert.assertFalse(farmVehicle.haspilot);
     }
 }

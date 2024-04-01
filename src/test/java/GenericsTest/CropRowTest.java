@@ -14,12 +14,12 @@ public class CropRowTest {
     }
      @Test
     public void testAddCrop(){
-//        CropRow cropRow = new CropRow();
-//        Crop crop = new crop();
-//        CropRow.addCrop(expected);
-//        Crop actual = cropRow.getRow()<>;
-//        Assert.assertEquals(actual, expected);
-//
+        CropRow cropRow = new CropRow();
+        Crop crop = new crop();
+        CropRow.addCrop(expected);
+        Crop actual = cropRow.getRow()<>;
+        Assert.assertEquals(actual, expected);
+
 
      }
      @Test

@@ -25,7 +25,7 @@ public class CropDusterTest
     @Test
     public void fly(){
         cropDuster.fly();
-        String noise = cropDuster.MakeNoise();
+        String noise = cropDuster.makeNoise();
         Assert.assertEquals("Vroom", noise);
     }
     @Test
@@ -42,6 +42,6 @@ public class CropDusterTest
     @Test
     public void removeRider(){
         cropDuster.addRider(pilot);
-        Assert.assertTrue(cropDuster.beenFertalized());
+        Assert.assertTrue(cropDuster.haspilot);
     }
 }

@@ -1,7 +1,5 @@
 package PersonTest;
 
-
-
 import com.zipcodewilmington.froilansfarm.Person.Person;
 
 import org.junit.Assert;
@@ -26,7 +24,6 @@ public class PersonTest {
         String expectedPerson = "Dave";
         person.add(person);
         String actualPerson = getName(Integer.parseInt("Dave"));
-
         Assert.assertTrue(expectedPerson, Boolean.parseBoolean(actualPerson));
     }
 
@@ -36,7 +33,6 @@ public class PersonTest {
         person.add(person);
         person.setName();
         String actualName = person.getName();
-
         Assert.assertEquals(expectedName, actualName);
     }
     @Test
@@ -44,14 +40,12 @@ public class PersonTest {
         String expectedName = "Froilan";
         person.setName();
         String actualName = person.getName();
-
         Assert.assertEquals(expectedName, actualName);
     }
     @Test
     public void eatTest(){
         person.add(person);
         person.eat();
-
         Assert.assertTrue(person.eat());
     }
 

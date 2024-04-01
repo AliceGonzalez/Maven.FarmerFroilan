@@ -5,7 +5,6 @@ import com.zipcodewilmington.froilansfarm.Food.Edible;
 
 
 public interface Eater_Interface<EdibleType> {
-    void eat(EarCorn earCorn, int i);
     public Boolean eat(Integer amountOfEat, EdibleType edibleType);
 
 public interface Eater_Interface {
@@ -14,5 +13,8 @@ public interface Eater_Interface {
         return food.get() - valueToChange;
     }
 
+    void eat(EarCorn earCorn, int i);
+
+    Boolean eat(Integer amountOfEat, Object o);
 }
 }

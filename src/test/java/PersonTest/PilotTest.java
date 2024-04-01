@@ -12,7 +12,7 @@ public class PilotTest {
 
     @Before
     public void setup(){
-        pilot = new Pilot();
+        pilot = new Pilot("Froilan");
         cropDuster = new CropDuster();
         cropRow = new CropRow();
     }
@@ -20,27 +20,23 @@ public class PilotTest {
     @Test
     public void makeNoiseTest(){
         String noise = pilot.makeNoise();
-
-        Assert.assertEquals("Weee!", noise);
+        Assert.assertEquals("Vroom!", noise);
     }
     @Test
     public void addRiderTest(){
         cropDuster.addRider(pilot);
-
         Assert.assertTrue(cropDuster.hasPilot);
     }
     @Test
     public void removeRiderTest(){
         cropDuster.addRider(pilot);
         cropDuster.removeRider();
-
         Assert.assertFalse(cropDuster.hasPilot);
     }
     @Test
     public void fertilizeTest(){
         cropDuster.addRider(pilot);
         cropDuster.fertilize(cropRow);
-
         Assert.assertTrue(cropRow.beenFertalized());
 
     }
@@ -48,7 +44,6 @@ public class PilotTest {
     public void mountTest(){
         cropDuster.addRider(pilot);
         cropDuster.hasBeenRidden();
-
         Assert.assertTrue(cropDuster.hasBeenRidden());
     }
 
