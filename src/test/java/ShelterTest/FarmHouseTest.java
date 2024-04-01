@@ -13,6 +13,7 @@ public class FarmHouseTest {
   public void farmHouseIsShelter() {
     Shelter<Person> farmHouse = new Shelter();
 
+    Object Person;
     Assert.assertTrue(Person instanceof Shelter);
   }
   @Test

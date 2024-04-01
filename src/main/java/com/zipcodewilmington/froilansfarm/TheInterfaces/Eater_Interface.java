@@ -17,4 +17,4 @@ public interface Eater_Interface {
 
     Boolean eat(Integer amountOfEat, Object o);
 }
-}
+
